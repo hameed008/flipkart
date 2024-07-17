@@ -29,9 +29,6 @@ app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true })) // we use this, because if user entered url with blank space then browaer will add random numbers in the blank spaces, that's why we need to parse the URL in order to work it properly.
 
 //* Using Routes:
-app.get('/', (req, res) => {
-  res.send('Server is running');
-});
 app.use('/', Router)
 
 //* Creating express server:

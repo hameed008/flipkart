@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const Connection = async () => {
+const Connection = async (dbName, username, password) => {
   // dbName, username, password
   const url = `mongodb+srv://${username}:${password}@hameed.20n99cb.mongodb.net/${dbName}`;
   try {
