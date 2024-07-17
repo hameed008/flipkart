@@ -12,7 +12,8 @@ const app = express();
 dotenv.config();
 
 //* Assigning port number:
-const PORT = 8000;
+const port = process.env.PORT || '8000';
+const host = process.env.HOST || 'localhost'
 
 //* Calling database connection method:
 const DATABASE_NAME = process.env.DATABASE_NAME
@@ -32,7 +33,7 @@ app.use(bodyParser.urlencoded({ extended: true })) // we use this, because if us
 app.use('/', Router)
 
 //* Creating express server:
-app.listen(PORT, () => { console.log(`Server is running on PORT ${PORT}`) })
+app.listen(port, host, () => { console.log(`Server is listening at http://${host}:${port}`) })
 
 //* Calling DefaultData function to insert documents to database:
 DefaultData()
