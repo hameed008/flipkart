@@ -15,11 +15,11 @@ dotenv.config();
 const PORT = 8000;
 
 //* Calling database connection method:
-// const DATABASE_NAME = process.env.DATABASE_NAME
-// const USERNAME = process.env.DB_USERNAME;
-// const PASSWORD = process.env.DB_PASSWORD;
-// Connection(DATABASE_NAME, USERNAME, PASSWORD);
-Connection();
+const DATABASE_NAME = process.env.DATABASE_NAME
+const USERNAME = process.env.DB_USERNAME;
+const PASSWORD = process.env.DB_PASSWORD;
+Connection(DATABASE_NAME, USERNAME, PASSWORD);
+//Connection();
 
 //* Using Cors:
 app.use(cors()) // when we make multiple request on different port in the browser then it gives 'cors' error, to prevent that we are using this line.
