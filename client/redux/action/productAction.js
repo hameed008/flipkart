@@ -1,6 +1,7 @@
 import axios from "axios";
 import * as actionType from '../constants/productConstant';
-const URL = 'https://flipkart-server-0l7s.onrender.com';
+const URL = import.meta.env.REACT_APP_API_URL;
+// const URL = 'https://flipkart-server-0l7s.onrender.com';
 export const getProducts = () => async (dispatch) => {
   try {
     const { data } = await axios.get(`${URL}/products`);

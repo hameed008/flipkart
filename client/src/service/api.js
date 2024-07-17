@@ -1,5 +1,6 @@
 import axios from 'axios';
-const URL = 'https://flipkart-server-0l7s.onrender.com';
+const URL = import.meta.env.REACT_APP_API_URL;
+//const URL = 'https://flipkart-server-0l7s.onrender.com';
 export const authenticateSignup = async (data) => {
   try {
 

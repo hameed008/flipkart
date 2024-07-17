@@ -8,6 +8,7 @@ import "./App.css";
 import DataProvider from "./context/DataProvider";
 
 function App() {
+  console.log(import.meta.env)
   return (
     <>
       <DataProvider>

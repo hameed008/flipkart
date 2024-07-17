@@ -6,7 +6,7 @@ import { getProducts } from '../../../redux/action/productAction'
 import { useDispatch, useSelector } from 'react-redux'
 const Home = () => {
   const { products } = useSelector((state) => state.getProducts);
-  //console.log(products)
+  console.log(products)
 
   const dispatch = useDispatch();
   useEffect(() => {
