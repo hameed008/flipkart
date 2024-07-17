@@ -33,7 +33,7 @@ app.use(bodyParser.urlencoded({ extended: true })) // we use this, because if us
 app.use('/', Router)
 
 //* Creating express server:
-app.listen(port, host, () => { console.log(`Server is listening at http://${host}:${port}`) })
+app.listen(port, () => { console.log(`Server is listening at http://${host}:${port}`) })
 
 //* Calling DefaultData function to insert documents to database:
 DefaultData()
