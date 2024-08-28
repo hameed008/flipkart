@@ -8,6 +8,7 @@
   box-sizing: border-box;
 }
 body {
+  width: 99%;
   font-family: sans-serif;
   /* background-color: #e5e7eb; */
   background-color: #f1f2f4;

@@ -4,6 +4,8 @@ import SlideBanner from './SlideBanner'
 import SlideProducts from './SlideProducts'
 import { getProducts } from '../../../redux/action/productAction'
 import { useDispatch, useSelector } from 'react-redux'
+import MidSlide from './MidSlide'
+import MidSection from './MidSection'
 const Home = () => {
   const { products } = useSelector((state) => state.getProducts);
   console.log(products)
@@ -17,8 +19,15 @@ const Home = () => {
 
       <Navbar></Navbar>
       <SlideBanner></SlideBanner>
-      <SlideProducts products={products}></SlideProducts>
-
+      <MidSlide products={products} title="Deal of the Day" timer={true} />
+      <MidSection />
+      <SlideProducts products={products} title="Discount for You" timer={false} />
+      <SlideProducts products={products} title="Suggested Items" timer={false} />
+      <SlideProducts products={products} title="Top slection" timer={false} />
+      <SlideProducts products={products} title="Recommended Ttems" timer={false} />
+      <SlideProducts products={products} title="Trednding Offers" timer={false} />
+      <SlideProducts products={products} title="Seasons top Picks" timer={false} />
+      <SlideProducts products={products} title="Top deals on Accessories" timer={false} />
 
     </>
   )
